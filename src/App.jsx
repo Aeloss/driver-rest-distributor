@@ -82,10 +82,10 @@ function App() {
   };
 
   return (
-    <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
-      <header style={{ marginBottom: '40px', textAlign: 'center' }}>
+    <div className="container">
+      <header style={{ textAlign: 'center' }}>
         <h1 className="title">Distribuidor de Descansos</h1>
-        <div className="header-tabs" style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+        <div className="header-tabs">
           <button
             className={`btn ${activeTab === 'drivers' ? 'btn-primary' : 'glass'}`}
             onClick={() => setActiveTab('drivers')}
@@ -109,7 +109,7 @@ function App() {
 
       <main>
         {activeTab === 'drivers' && (
-          <div className="grid mobile-stack" style={{ gridTemplateColumns: '1fr 350px', alignItems: 'start' }}>
+          <div className="main-grid">
             <div className="glass card">
               <h2 style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Users /> Flota de Conductores ({drivers.length})

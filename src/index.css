@@ -19,6 +19,25 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  align-items: start;
+}
+
+.header-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 body {
   font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
   background: var(--bg-dark);
@@ -125,29 +144,15 @@ select:focus {
 /* responsive */
 @media (max-width: 768px) {
   .container {
-    padding: 20px 10px !important;
+    padding: 20px 10px;
   }
 
-  .title {
-    font-size: 1.5rem;
-  }
-
-  header {
-    margin-bottom: 20px !important;
+  .main-grid {
+    grid-template-columns: 1fr;
   }
 
   .header-tabs {
     flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-
-  .mobile-stack {
-    grid-template-columns: 1fr !important;
   }
 
   .card {
