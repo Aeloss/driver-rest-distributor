@@ -25,7 +25,7 @@ body {
   color: var(--text-main);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0, transparent 50%),
     radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.1) 0, transparent 50%);
 }
@@ -75,7 +75,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-input, select {
+input,
+select {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid var(--border);
   color: white;
@@ -85,7 +86,8 @@ input, select {
   transition: border-color 0.2s;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: var(--primary);
 }
 
@@ -102,6 +104,71 @@ input:focus, select:focus {
   text-transform: uppercase;
 }
 
-.badge-van { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-truck { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-car { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.badge-van {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-truck {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-car {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px !important;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  header {
+    margin-bottom: 20px !important;
+  }
+
+  .header-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .mobile-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .schedule-container {
+    margin: 0 -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  table {
+    min-width: 600px;
+    /* Allow horizontal scroll */
+  }
+
+  th,
+  td {
+    padding: 8px 4px !important;
+    font-size: 0.75rem !important;
+  }
+}
